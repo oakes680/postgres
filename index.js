@@ -8,7 +8,7 @@ server.use(express.json())
 
 server.use('/api',  userRouter)
 
-const port = 8888
+const port = process.env.DATABASE_URL ||  8888
 
 postgresql - fitted - 98682 
 
