@@ -3,7 +3,7 @@ const UserModel = require('../models/index')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const { jwtSecret } = require('../../config/secrets')
+// const { jwtSecret } = require('../../config/secrets')
 
 const router = express()
 router.use(express.json())
@@ -56,6 +56,7 @@ router.post('/login', (req, res) => {
 
 })
 
+const secret = "random text here"
 
 function generateToken(user) {
  const  payload = {
@@ -68,7 +69,7 @@ function generateToken(user) {
   }
 
 
-  return  jwt.sign(payload, jwtSecret, options)
+  return  jwt.sign(payload, secret, options)
 }
 
 module.exports = router
