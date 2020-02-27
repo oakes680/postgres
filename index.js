@@ -8,7 +8,7 @@ server.use(express.json())
 
 server.use('/api',  userRouter)
 
-const port = process.env.DATABASE_URL ||  8888
+const port = process.env.PORT ||  8888
 
 //done 
 server.listen(port, () => {
