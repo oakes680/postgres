@@ -1,7 +1,7 @@
 const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors')
-const userRouter = require('./db/api/index')
+const userRouter = require('./db/api/index.js')
 
 const server = express()
 server.use(cors())
